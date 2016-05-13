@@ -159,15 +159,10 @@
             <artifactId>scalatest_2.10</artifactId>
         </dependency>
 
-     	<dependency>
-            <groupId>org.scala-lang.modules</groupId>
-            <artifactId>scala-xml_2.11</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-scala_2.10</artifactId>
-            <version>2.5.2</version>
+	    <version>2.5.2</version>
         </dependency>
 
 
