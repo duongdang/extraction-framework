@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>org.dbpedia.extraction</groupId>
-    <artifactId>live</artifactId>
+    <artifactId>live_2.10</artifactId>
     <name>Live extraction</name>
 
     <build>
@@ -82,7 +82,7 @@
 
         <dependency>
             <groupId>org.dbpedia.extraction</groupId>
-            <artifactId>core</artifactId>
+            <artifactId>core_2.10</artifactId>
         </dependency>
 
         <dependency>
@@ -101,7 +101,7 @@
             <artifactId>collections-generic</artifactId>
             <version>4.01</version>
         </dependency>
-        
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -129,7 +129,7 @@
             <artifactId>bonecp</artifactId>
             <version>0.8.0.RELEASE</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -156,12 +156,12 @@
 
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.11</artifactId>
+            <artifactId>scalatest_2.10</artifactId>
         </dependency>
 
      	<dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-xml</artifactId>
+            <groupId>org.scala-lang.modules</groupId>
+            <artifactId>scala-xml_2.11</artifactId>
         </dependency>
 
         <dependency>

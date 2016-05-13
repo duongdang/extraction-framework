@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>org.dbpedia.extraction</groupId>
-	<artifactId>dump</artifactId>
+	<artifactId>dump_2.10</artifactId>
 	<name>DBpedia Dump Extraction</name>
 
 	<build>
@@ -44,14 +44,14 @@
 								<arg>/data/dbpedia-release/data</arg>
 								<!-- location of SQL file containing MediaWiki table definitions -->
 								<arg>/home/dbpedia-release/bin/mediawiki/core/maintenance/tables.sql</arg>
-								<!-- JDBC URL of MySQL server. Import creates a new database for 
+								<!-- JDBC URL of MySQL server. Import creates a new database for
 									each wiki. -->
 								<arg>jdbc:mysql://localhost/?characterEncoding=UTF-8</arg>
 								<!-- require-download-complete -->
 								<arg>true</arg>
 								<!-- file name: pages-articles.xml{,.bz2,.gz} -->
 								<arg>pages-articles.xml.bz2</arg>
-								<!-- languages and article count ranges, comma-separated, e.g. "de,en" 
+								<!-- languages and article count ranges, comma-separated, e.g. "de,en"
 									or "@mappings" etc. -->
 								<arg>10000-</arg>
 							</args>
@@ -63,10 +63,10 @@
 
 							<jvmArgs>
 								<jvmArg>-server</jvmArg>
-								<!-- <jvmArg>-Xmx4096m</jvmArg> <jvmArg>-XX:+HeapDumpOnOutOfMemoryError</jvmArg> 
-									<jvmArg>-XX:+UseConcMarkSweepGC</jvmArg> <jvmArg>-XX:+PrintGC</jvmArg> <jvmArg>-XX:+PrintGCTimeStamps</jvmArg> 
-									<jvmArg>-Dhttp.proxyHost=proxy.server.com</jvmArg> <jvmArg>-Dhttp.proxyPort=80</jvmArg> 
-									<jvmArg>-Dhttp.proxyUser=user</jvmArg> <jvmArg>-Dhttp.proxyPassword=password</jvmArg> 
+								<!-- <jvmArg>-Xmx4096m</jvmArg> <jvmArg>-XX:+HeapDumpOnOutOfMemoryError</jvmArg>
+									<jvmArg>-XX:+UseConcMarkSweepGC</jvmArg> <jvmArg>-XX:+PrintGC</jvmArg> <jvmArg>-XX:+PrintGCTimeStamps</jvmArg>
+									<jvmArg>-Dhttp.proxyHost=proxy.server.com</jvmArg> <jvmArg>-Dhttp.proxyPort=80</jvmArg>
+									<jvmArg>-Dhttp.proxyUser=user</jvmArg> <jvmArg>-Dhttp.proxyPassword=password</jvmArg>
 									<jvmArg>-Dhttp.nonProxyHosts="localhost|127.0.0.1"</jvmArg> -->
 							</jvmArgs>
 						</launcher>
@@ -79,10 +79,10 @@
 								<jvmArg>-server</jvmArg>
 								<!-- Request statistics -->
 								<jvmArg>-Dextract.template.stats=true</jvmArg>
-								<!-- <jvmArg>-Xmx4096m</jvmArg> <jvmArg>-XX:+HeapDumpOnOutOfMemoryError</jvmArg> 
-									<jvmArg>-XX:+UseConcMarkSweepGC</jvmArg> <jvmArg>-XX:+PrintGC</jvmArg> <jvmArg>-XX:+PrintGCTimeStamps</jvmArg> 
-									<jvmArg>-Dhttp.proxyHost=proxy.server.com</jvmArg> <jvmArg>-Dhttp.proxyPort=80</jvmArg> 
-									<jvmArg>-Dhttp.proxyUser=user</jvmArg> <jvmArg>-Dhttp.proxyPassword=password</jvmArg> 
+								<!-- <jvmArg>-Xmx4096m</jvmArg> <jvmArg>-XX:+HeapDumpOnOutOfMemoryError</jvmArg>
+									<jvmArg>-XX:+UseConcMarkSweepGC</jvmArg> <jvmArg>-XX:+PrintGC</jvmArg> <jvmArg>-XX:+PrintGCTimeStamps</jvmArg>
+									<jvmArg>-Dhttp.proxyHost=proxy.server.com</jvmArg> <jvmArg>-Dhttp.proxyPort=80</jvmArg>
+									<jvmArg>-Dhttp.proxyUser=user</jvmArg> <jvmArg>-Dhttp.proxyPassword=password</jvmArg>
 									<jvmArg>-Dhttp.nonProxyHosts="localhost|127.0.0.1"</jvmArg> -->
 							</jvmArgs>
 						</launcher>
@@ -99,9 +99,9 @@
 						<launcher>
 							<id>download</id>
 							<mainClass>org.dbpedia.extraction.dump.download.Download</mainClass>
-							<!-- <jvmArgs> <jvmArg>-Dhttp.proxyHost=proxy.server.com</jvmArg> 
-								<jvmArg>-Dhttp.proxyPort=port</jvmArg> <jvmArg>-Dhttp.proxyUser=user</jvmArg> 
-								<jvmArg>-Dhttp.proxyPassword=password</jvmArg> <jvmArg>-Dhttp.nonProxyHosts="localhost|127.0.0.1"</jvmArg> 
+							<!-- <jvmArgs> <jvmArg>-Dhttp.proxyHost=proxy.server.com</jvmArg>
+								<jvmArg>-Dhttp.proxyPort=port</jvmArg> <jvmArg>-Dhttp.proxyUser=user</jvmArg>
+								<jvmArg>-Dhttp.proxyPassword=password</jvmArg> <jvmArg>-Dhttp.nonProxyHosts="localhost|127.0.0.1"</jvmArg>
 								</jvmArgs> -->
 							<!-- ../run download config=download.properties -->
 						</launcher>
@@ -113,7 +113,7 @@
 								<arg>/home/release/wikipedia</arg>
 								<arg>download-complete</arg>
 								<arg>1</arg><!-- keep only one latest download -->
-								<arg>*.sql.gz,*.xml.bz2,*.sql,*-pages-articles.xml,index.html</arg><!-- 
+								<arg>*.sql.gz,*.xml.bz2,*.sql,*-pages-articles.xml,index.html</arg><!--
 									delete these files -->
 							</args>
 						</launcher>
@@ -125,7 +125,7 @@
 								<arg>/home/release/wikipedia</arg>
 								<arg>extraction-complete</arg>
 								<arg>2</arg><!-- keep two extractions -->
-								<arg>*.nt,*.nq,*.tql,*.ttl,*.trix,*-redirects.obj</arg><!-- delete 
+								<arg>*.nt,*.nq,*.tql,*.ttl,*.trix,*-redirects.obj</arg><!-- delete
 									these files -->
 							</args>
 						</launcher>
@@ -141,12 +141,12 @@
 
 		<dependency>
 			<groupId>org.dbpedia.extraction</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>core_2.10</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-xml</artifactId>
+			<groupId>org.scala-lang.modules</groupId>
+			<artifactId>scala-xml_2.11</artifactId>
 		</dependency>
 
 		<dependency>

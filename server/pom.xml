@@ -11,7 +11,7 @@
 	</parent>
 
 	<groupId>org.dbpedia.extraction</groupId>
-	<artifactId>server</artifactId>
+	<artifactId>server_2.10</artifactId>
 	<name>DBpedia Server</name>
 
 	<build>
@@ -40,9 +40,9 @@
 							</args>
 							<jvmArgs>
 								<jvmArg>-Xms512m</jvmArg>
-								<jvmArg>-Xmx4096m</jvmArg><!-- 4G is ok with CMS or G1, other GCs 
+								<jvmArg>-Xmx4096m</jvmArg><!-- 4G is ok with CMS or G1, other GCs
 									need >= 4.5G -->
-								<jvmArg>-XX:-OmitStackTraceInFastThrow</jvmArg><!-- always show full 
+								<jvmArg>-XX:-OmitStackTraceInFastThrow</jvmArg><!-- always show full
 									exception to make sure that validation messages are useful -->
 								<jvmArg>-XX:+PrintGC</jvmArg>
 								<jvmArg>-XX:+PrintGCTimeStamps</jvmArg>
@@ -61,7 +61,7 @@
 								<arg>.gz</arg><!-- file suffix: '.gz', '.bz2' or '' -->
 								<arg>false</arg><!-- pretty printing? ugly in log files. -->
 								<!-- all additional args are languages, comma or whitespace separated -->
-								<!-- if none are given, all languages with a mapping namespace are 
+								<!-- if none are given, all languages with a mapping namespace are
 									used -->
 								<!-- <arg>ar,bg,bn</arg> -->
 							</args>
@@ -77,7 +77,7 @@
 
 		<dependency>
 			<groupId>org.dbpedia.extraction</groupId>
-			<artifactId>core</artifactId>
+			<artifactId>core_2.10</artifactId>
 		</dependency>
 
 		<dependency>
@@ -86,10 +86,10 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-xml</artifactId>
+			<groupId>org.scala-lang.modules</groupId>
+			<artifactId>scala-xml_2.11</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
